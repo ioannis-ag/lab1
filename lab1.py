@@ -12,7 +12,7 @@ def more(text):
 
 url = input("Give url:\t")  # προσδιορισμός του url
 
-if not url.startswitch("https://"):
+if not url.startswitch('https://'):
     url = 'https://' + url
 
 print(url)
