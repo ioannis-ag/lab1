@@ -23,7 +23,7 @@ with requests.get(url) as response:
     #    print(f"{key}, Value:{response.headers[key]}")
     print(f"Server: {response.headers.get('Server')}")
 
-    print(f"Has cookies: {'Set-Cookies' in response.headers}")
+    print(f"Has cookies: {len(response.cookies) > 0}")
 
     for cookie in response.cookies:
         print(f"Name: {cookie.name}, Expires:{datetime.fromtimestamp(cookie.expires)}")
